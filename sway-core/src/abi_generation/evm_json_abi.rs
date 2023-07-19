@@ -93,6 +93,7 @@ pub fn json_abi_str(
             IntegerBits::Sixteen => "uint16",
             IntegerBits::ThirtyTwo => "uint32",
             IntegerBits::SixtyFour => "uint64",
+            IntegerBits::V256 => todo!(),
         }
         .into(),
         Boolean => "bool".into(),
@@ -159,6 +160,7 @@ pub fn json_abi_param_type(
             IntegerBits::Sixteen => ethabi::ParamType::Uint(16),
             IntegerBits::ThirtyTwo => ethabi::ParamType::Uint(32),
             IntegerBits::SixtyFour => ethabi::ParamType::Uint(64),
+            IntegerBits::V256 => todo!(),
         },
         Boolean => ethabi::ParamType::Bool,
         B256 => ethabi::ParamType::Uint(256),

@@ -370,6 +370,8 @@ impl<'a, 'eng> InstructionVerifier<'a, 'eng> {
 
             let caller_arg_type = opt_caller_arg_type.as_ref().unwrap();
             if !caller_arg_type.eq(self.context, callee_arg_type) {
+                dbg!(caller_arg_type.as_string(self.context));
+                dbg!(callee_arg_type.as_string(self.context));
                 return Err(IrError::VerifyCallArgTypeMismatch(
                     callee_content.name.clone(),
                     caller_arg_type.as_string(self.context),
