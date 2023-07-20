@@ -8,6 +8,7 @@ pub trait Add {
 
 impl Add for u256 {
     fn add(self, other: Self) -> Self {
+        //let bytes: [u8; 64] = __be_bytes(self);
         __add(self, other)
     }
 }

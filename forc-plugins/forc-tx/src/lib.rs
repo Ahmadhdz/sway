@@ -689,6 +689,8 @@ impl From<Mint> for fuel_tx::Mint {
 impl TryFrom<Input> for fuel_tx::Input {
     type Error = ConvertInputError;
     fn try_from(input: Input) -> Result<Self, Self::Error> {
+        let predicate_gas_used = 0;
+
         let input = match input {
             Input::Coin(coin) => {
                 let InputCoin {
@@ -721,6 +723,7 @@ impl TryFrom<Input> for fuel_tx::Input {
                             asset_id,
                             tx_pointer,
                             maturity.into(),
+                            predicate_gas_used,
                             std::fs::read(&predicate).map_err(|err| {
                                 ConvertInputError::PredicateRead {
                                     path: predicate,
@@ -803,6 +806,7 @@ impl TryFrom<Input> for fuel_tx::Input {
                                 recipient,
                                 amount,
                                 nonce,
+                                predicate_gas_used,
                                 predicate,
                                 predicate_data,
                             )
@@ -812,6 +816,7 @@ impl TryFrom<Input> for fuel_tx::Input {
                                 recipient,
                                 amount,
                                 nonce,
+                                predicate_gas_used,
                                 data,
                                 predicate,
                                 predicate_data,

@@ -18,3 +18,6 @@ fn main() -> bool {
 // check: $(ptr_val=$VAL) = get_elem_ptr v12, ptr bool
 // check: $(ret_val=$VAL) = load $ptr_val
 // check: ret bool $ret_val
+
+// ::check-asm::
+// check: a

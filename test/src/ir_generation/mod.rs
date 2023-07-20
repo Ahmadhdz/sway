@@ -417,6 +417,8 @@ pub(super) async fn run(filter_regex: Option<&regex::Regex>, verbose: bool) -> R
                                 );
                             }
 
+                            
+
                             // Do ASM checks.
                             match checker.explain(&asm_output, filecheck::NO_VARIABLES) {
                                 Ok((success, error)) => {
