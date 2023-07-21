@@ -493,7 +493,7 @@ impl<'ir, 'eng> FuelAsmBuilder<'ir, 'eng> {
         let arg2_width = arg2
             .get_type(self.context)
             .and_then(|x| x.get_uint_width(self.context));
-        let (opcode, comment) = match dbg!((arg1_width, arg2_width)) {
+        let (opcode, comment) = match (arg1_width, arg2_width) {
             (Some(256), Some(256)) => match op {
                 BinaryOpKind::Add => (
                     VirtualOp::WQOP(
