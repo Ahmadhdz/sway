@@ -4,7 +4,6 @@ use crate::{
     type_system::*,
     BuildTarget, Engines,
 };
-
 use itertools::Itertools;
 use sway_ast::{
     attribute::Annotated,
@@ -31,7 +30,6 @@ use sway_types::{
         TUPLE_NAME_PREFIX, VALID_ATTRIBUTE_NAMES,
     },
     integer_bits::IntegerBits,
-    BaseIdent,
 };
 use sway_types::{Ident, Span, Spanned};
 

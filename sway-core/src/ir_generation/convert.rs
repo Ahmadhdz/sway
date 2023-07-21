@@ -46,7 +46,7 @@ pub(super) fn convert_literal_to_constant(
         Literal::U16(n) => Constant::new_uint(context, 64, *n as u64),
         Literal::U32(n) => Constant::new_uint(context, 64, *n as u64),
         Literal::U64(n) => Constant::new_uint(context, 64, *n),
-        Literal::U256(n) => todo!(),
+        Literal::U256(_) => todo!(),
         Literal::Numeric(n) => Constant::new_uint(context, 64, *n),
         Literal::String(s) => Constant::new_string(context, s.as_str().as_bytes().to_vec()),
         Literal::Boolean(b) => Constant::new_bool(context, *b),

@@ -230,7 +230,7 @@ impl<Tx: Buildable + SerializableVec + field::Witnesses + Send> TransactionBuild
             let witness = Witness::from(signature.as_ref());
             tx.replace_witness(signature_witness_index, witness);
         }
-        tx.precompute(&params.chain_id);
+        let _ = tx.precompute(&params.chain_id);
 
         Ok(tx)
     }

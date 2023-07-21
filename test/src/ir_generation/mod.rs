@@ -417,8 +417,6 @@ pub(super) async fn run(filter_regex: Option<&regex::Regex>, verbose: bool) -> R
                                 );
                             }
 
-                            
-
                             // Do ASM checks.
                             match checker.explain(&asm_output, filecheck::NO_VARIABLES) {
                                 Ok((success, error)) => {
@@ -535,7 +533,6 @@ fn compile_core(build_target: BuildTarget, engines: &Engines) -> namespace::Modu
             std_module
         }
         _ => {
-            println!("");
             println!("Errors");
             println!("------");
             for err in res.errors {

@@ -88,7 +88,7 @@ impl fmt::Display for Literal {
             Literal::U16(content) => content.to_string(),
             Literal::U32(content) => content.to_string(),
             Literal::U64(content) => content.to_string(),
-            Literal::U256(content) => todo!(),
+            Literal::U256(_) => todo!(),
             Literal::Numeric(content) => content.to_string(),
             Literal::String(content) => content.as_str().to_string(),
             Literal::Boolean(content) => content.to_string(),

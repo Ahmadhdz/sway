@@ -25,7 +25,7 @@ use std::{
     str::FromStr,
     sync::Arc,
 };
-use sway_core::fuel_prelude::{fuel_tx::ConsensusParameters, fuel_types::ChainId};
+use sway_core::fuel_prelude::fuel_types::ChainId;
 pub use sway_core::Programs;
 use sway_core::{
     abi_generation::{

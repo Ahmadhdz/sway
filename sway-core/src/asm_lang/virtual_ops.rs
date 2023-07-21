@@ -11,12 +11,7 @@ use super::{
     Op,
 };
 use crate::asm_generation::fuel::{data_section::DataId, register_allocator::RegisterPool};
-
-use std::{
-    collections::{BTreeSet, HashMap},
-    fmt::Pointer,
-};
-
+use std::collections::{BTreeSet, HashMap};
 use std::fmt;
 
 #[derive(Clone, Copy, Debug)]
